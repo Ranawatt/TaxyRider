@@ -24,11 +24,11 @@ class MainActivity : AppCompatActivity() {
             // your app now refreshes every 48 ms with new content.
             // This will be reflected in the bars displayed by the
             // Profile GPU Rendering tool.
-//            try {
-//                Thread.sleep(32) // two refreshes
-//            } catch (e: InterruptedException) {
-//                e.printStackTrace()
-//            }
+            try {
+                Thread.sleep(32) // two refreshes
+            } catch (e: InterruptedException) {
+                e.printStackTrace()
+            }
             view.setBackgroundResource(R.drawable.ankylo)
             0
         }

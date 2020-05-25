@@ -1,5 +1,6 @@
 package com.example.taxyrider.memoryoverload
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
@@ -7,6 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.taxyrider.R
+import kotlin.random.Random
 
 
 class MemoryActivity : AppCompatActivity() {
@@ -45,5 +47,16 @@ class MemoryActivity : AppCompatActivity() {
             linearLayout.addView(textViews[i])
         }
         root.addView(linearLayout)
+    }
+
+    /**
+     * Creates a random color for background color of the text view.
+     */
+    private fun getRandomColor(): Int {
+        val r = Random()
+        val red: Int = r.nextInt(255)
+        val green: Int = r.nextInt(255)
+        val blue: Int = r.nextInt(255)
+        return Color.rgb(red, green, blue)
     }
 }

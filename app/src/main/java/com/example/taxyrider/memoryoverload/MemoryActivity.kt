@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.taxyrider.R
-import kotlin.random.Random
+import java.util.*
 
 
 class MemoryActivity : AppCompatActivity() {

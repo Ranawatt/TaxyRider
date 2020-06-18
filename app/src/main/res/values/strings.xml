@@ -3,4 +3,5 @@
     <string name="view2">View2</string>
     <string name="view3">View3</string>
     <string name="view1">View1</string>
+    <string name="fetch_user">Fetch User</string>
 </resources>

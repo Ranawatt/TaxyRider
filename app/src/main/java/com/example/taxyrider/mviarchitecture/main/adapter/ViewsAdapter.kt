@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.taxyrider.R
 import com.example.taxyrider.mviarchitecture.data.model.User
 
-class ViewsAdapter(private val arrayList: ArrayList<User>) : RecyclerView.Adapter<ViewsAdapter.ViewsHolder>() {
+class ViewsAdapter(private val users: ArrayList<User>) : RecyclerView.Adapter<ViewsAdapter.ViewsHolder>() {
 
     class ViewsHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bind(user: User){
@@ -20,15 +20,20 @@ class ViewsAdapter(private val arrayList: ArrayList<User>) : RecyclerView.Adapte
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewsHolder {
 
-        return LayoutInflater.from(parent.context).inflate(R.layout.item_layout,parent, false)
+        return LayoutInflater.from(parent.context).inflate(R.layout.item_layout, parent, false)
     }
 
 
     override fun onBindViewHolder(holder: ViewsHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.bind(users[position])
     }
 
     override fun getItemCount(): Int {
-        return user.size
+        return users.size
+    }
+
+    fun addData(list: List<User>) {
+        users.addAll(list)
+        notifyDataSetChanged()
     }
 }
